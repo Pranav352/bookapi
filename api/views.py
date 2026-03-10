@@ -1,6 +1,7 @@
-from rest_framework import viewsets
+from rest_framework import viewsets , response
 from api.models import Book
-from.Serializer import Bookserializer
+from.Serializer import Bookserializer #Loginserializers, 
+from.Serializer import serializers
 
 
 
@@ -18,6 +19,18 @@ class BookViewSet(viewsets.ModelViewSet):
     def destroy(self, request, *args, **kwargs):
         print(" Custom delete method called")
         return super().destroy(request, *args, **kwargs)
+    
+# class LoginApi(viewsets):
+#     def POST(self, request):
+        
+#         data = request.data()
+#         print(data)
+#         return response({ 
+#             "status": True,
+#             "data": serializers.data
+            
+#             })
+
     
 
 
